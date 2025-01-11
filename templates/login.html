@@ -1,0 +1,18 @@
+<!-- templates/login.html -->
+{% extends "base_calendar.html" %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2 class="text-center">헬스체크 시간 조회</h2>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            <div class="mb-3">
+                <label for="birthdate" class="form-label">생년월일</label>
+                <input type="text" class="form-control" id="birthdate" name="birthdate" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">조회하기</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

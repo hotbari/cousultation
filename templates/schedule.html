@@ -1,0 +1,111 @@
+<!-- templates/schedule.html -->
+{% extends "base_calendar.html" %}
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Gaegu:wght@400;700&display=swap');
+
+    .cute-card {
+        max-width: 500px;
+        margin: 2rem auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .cute-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .cute-header {
+        background: linear-gradient(135deg, #FFB088 0%, #FF9999 100%);
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .cute-header h2 {
+        margin: 0;
+        font-size: 1.9rem;
+        font-weight: 700;
+        font-family: 'Gaegu', cursive;
+        letter-spacing: 1px;
+    }
+
+    .cute-body {
+        padding: 2rem;
+        background-color: #FFF9F7;
+    }
+
+    .info-text {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.3rem;
+        color: #4A4A4A;
+        margin: 1rem 0;
+        padding: 0.8rem 1.2rem;
+        background-color: white;
+        border-radius: 10px;
+        border-left: 4px solid #FFB088;
+        display: flex;
+        align-items: center;
+    }
+
+    .info-text span {
+        color: #FF8F66;
+        font-weight: 500;
+        margin-right: 1rem;
+        font-family: 'Gaegu', cursive;
+        font-size: 1.4rem;
+    }
+
+    .info-info span {
+        color: #350111;
+        font-weight: 400;
+        margin-right: 1rem;
+        font-family: 'Gaegu', cursive;
+        font-size: 1.1rem;
+    }
+
+    .cute-button {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 2rem;
+        background: linear-gradient(135deg, #FF9999 0%, #FFB088 100%);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .cute-button:hover {
+        background: linear-gradient(135deg, #FF8F66 0%, #FF9999 100%);
+        transform: scale(1.02);
+        color: white;
+    }
+</style>
+
+<div class="cute-card">
+    <div class="cute-header">
+        <h2>✨헬스체크 진행 정보 ✨</h2>
+    </div>
+    <div class="cute-body">
+        <div class="info-info">
+            <span>{{ info }}</span>
+        </div>
+        <div class="info-text">
+            <span>성함</span> {{ name }}
+        </div>
+        <div class="info-text">
+            <span>일시</span> {{ consultation_time }}
+        </div>
+        <a href="{{ url_for('login') }}" class="cute-button">다시 입력하기</a>
+    </div>
+</div>
+{% endblock %}

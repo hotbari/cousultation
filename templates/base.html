@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헬스체크 일정 확인</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Gaegu:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 20px;
+            background-color: #FFF9F7;
+        }
+
+        .login-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .login-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .login-header {
+            background: linear-gradient(135deg, #FFB088 0%, #FF9999 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .login-header h1 {
+            margin: 0;
+            font-size: 1.9rem;
+            font-weight: 700;
+            font-family: 'Gaegu', cursive;
+            letter-spacing: 1px;
+        }
+
+        .login-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: #FF8F66;
+            font-weight: 500;
+            font-family: 'Gaegu', cursive;
+            font-size: 1.4rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1.1rem;
+            border: 2px solid #FFE5D9;
+            border-radius: 10px;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #FFB088;
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #FF9999 0%, #FFB088 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #FF8F66 0%, #FF9999 100%);
+            transform: scale(1.02);
+        }
+
+        .error {
+            color: #FF6B6B;
+            background-color: #FFF0F0;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-header">
+            <h1>✨ 헬스체크 일정 확인 ✨</h1>
+        </div>
+        <div class="login-body">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="error">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST">
+                <div class="form-group">
+                    <label for="birthdate">🌟 생년월일 (YYMMDD)</label>
+                    <input type="text" id="birthdate" name="birthdate"
+                           maxlength="6" placeholder="900101"
+                           pattern="\d{6}"
+                           title="생년월일 6자리를 입력해주세요"
+                           required>
+                </div>
+                <button type="submit">내 일정 확인하기</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
