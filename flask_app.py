@@ -4,10 +4,10 @@ from datetime import datetime
 import re
 
 # 기본 설정
-# app = Flask(__name__)
+app = Flask(__name__)
 
 # 폴더 구조 변경
-app = Flask(__name__, template_folder="../templates")
+# app = Flask(__name__, template_folder="../templates")
 app.secret_key = 'your-secret-key-here'  # Change this to a secure secret key
 
 # 데이터 정리
