@@ -1,4 +1,4 @@
-# index.py
+# app.py
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from datetime import datetime
 import re
@@ -199,12 +199,12 @@ def schedule():
             today_month = '0' + str(datetime.now().month)
         if birthdate[2:4] == today_month:
             return render_template('schedule.html',
-                               name=student_data['name'],
-                               consultation_time=consultation_time,
-                               # consultation_time=student_data['consultation_time'],
-                               info='헬스체크 시에는 카메라와 마이크 사용이 필요합니다!',
-                                msg='장비 사용에 문제가 없는지 미리 확인해주세요.',
-                                birth_msg = birth_msg)
+                                   name=student_data['name'],
+                                   consultation_time=consultation_time,
+                                   # consultation_time=student_data['consultation_time'],
+                                   info='헬스체크 시에는 카메라와 마이크 사용이 필요합니다!',
+                                   msg='장비 사용에 문제가 없는지 미리 확인해주세요.',
+                                   birth_msg = birth_msg)
 
     return render_template('schedule.html',
                            name = student_data['name'],
@@ -215,4 +215,4 @@ def schedule():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=False,port=5001)
