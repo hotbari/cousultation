@@ -11,130 +11,93 @@ app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'  # Change this to a secure secret key
 
 # 데이터 정리
-"""
-15시 = 1, 16시 = 2, 17시 = 3
-"""
-# 1차
-# 새싹반 8인 먼저
-mday_1 = "1월 13일 15시" # 장현영
-mday_2 = "1월 13일 16시" # 임성욱
-mday_3 = "1월 13일 17시" # 김지안
-
-tday_1 = "1월 14일 15시" # 김나미
-tday_2 = "1월 14일 16시" # 김지수(부산)
-tday_3 = "1월 14일 17시" # 김한서
-
-wday_1 = "1월 15일 15시" # 이삭
-wday_2 = "1월 15일 16시" # 홍승우
-
-wday_3 = "1월 15일 17시" # 송희태
-
-# 조수민
-# 이준호
-# 정영하
-# 명보경
-# 배현우
-# 김지수(서울)
-# 노지민
-
-# 고근우
-# 권도현
-# 권지원
-# 김나경
-# 김우중
-# 김태진
-# 박유진
-# 이영득
-# 이현경
-# 장태문
-# 정근영
-# 정한율
 
 CONSULTATION_TIMES = {
     # 새싹반 먼저
-    "980314": { "name" : "고근우",
-                "consultation_time":"일 시"
-                },
-    "001221": { "name" : "권도현",
-                "consultation_time":"일 시"
-                },
-    "030709": { "name" : "권지원",
-                "consultation_time":"일 시"
-                },
-    "010330": { "name" : "김나경",
-                "consultation_time":"일 시"
-                },
-    "870126": { "name" : "김나미", # 새싹반
-                "consultation_time": tday_1
-                },
-    "950422": { "name" : "김우중",
-                "consultation_time":"일 시"
-                },
-    "940826": { "name" : "김지수(서울)",
-                "consultation_time":"일 시"
-                },
-    "980323": { "name" : "김지수(부산)", # 새싹반
-                "consultation_time": tday_2
-                },
-    "000407": { "name" : "김지안", # 새싹반
-                "consultation_time": mday_3
-                },
-    "920131": { "name" : "김태진",
-                "consultation_time":"일 시"
-                },
-    "020912": { "name" : "김한서", # 새싹반
-                "consultation_time": tday_3
-                },
-    "000121": { "name" : "노지민",
-                "consultation_time":"일 시"
-                },
-    "000208": { "name" : "명보경",
-                "consultation_time":"일 시"
-                },
-    "920821": { "name" : "박유진",
-                "consultation_time":"일 시"
-                },
-    "930318": { "name" : "배현우",
-                "consultation_time":"일 시"
-                },
-    "950914": { "name" : "송희태",
-                "consultation_time": wday_3
-                },
-    "990318": { "name" : "이삭",
-                "consultation_time": wday_1
-                },
-    "901112": { "name" : "이영득",
-                "consultation_time":"일 시"
+    "930626": { "name" : "조수민",
+                "consultation_time":"1월 16일 15시"
                 },
     "950102": { "name" : "이준호",
-                "consultation_time":"일 시"
+                "consultation_time":"1월 16일 16시"
                 },
-    "991217": { "name" : "이현경",
-                "consultation_time":"일 시"
+    "930318": { "name" : "배현우",
+                "consultation_time":"1월 16일 17시"
                 },
-    "860307": { "name" : "임성욱", # 새싹반
-                "consultation_time": mday_2
-                },
-    "930806": { "name" : "장태문",
-                "consultation_time":"일 시"
-                },
-    "970128": { "name" : "장현영", # 새싹반
-                "consultation_time": mday_1
-                },
-    "970612": { "name" : "정근영",
-                "consultation_time":"일 시"
+    "940826": { "name" : "김지수(서울)",
+                "consultation_time":"1월 20일 15시"
                 },
     "980706": { "name" : "정영하",
-                "consultation_time":"일 시"
+                "consultation_time":"1월 20일 16시"
+                },
+    "980314": { "name" : "고근우",
+                "consultation_time":"1월 20일 17시"
+                },
+    "001221": { "name" : "권도현",
+                "consultation_time":"1월 21일 15시"
+                },
+    "000121": { "name" : "노지민",
+                "consultation_time":"1월 21일 16시"
+                },
+    "901112": { "name" : "이영득",
+                "consultation_time":"1월 21일 17시"
+                },
+    "030709": { "name" : "권지원",
+                "consultation_time":"1월 22일 15시"
+                },
+    "930806": { "name" : "장태문",
+                "consultation_time":"1월 22일 16시"
+                },
+    "010330": { "name" : "김나경",
+                "consultation_time":"1월 22일 17시"
                 },
     "980204": { "name" : "정한율",
-                "consultation_time":"일 시"
+                "consultation_time":"1월 23일 15시"
                 },
-    "930626": { "name" : "조수민",
-                "consultation_time":"일 시"
+    "950422": { "name" : "김우중",
+                "consultation_time":"1일 23일 16시"
+                },
+    "920131": { "name" : "김태진",
+                "consultation_time":"1월 23일 17시"
+                },
+    "920821": { "name" : "박유진",
+                "consultation_time":"1월 24일 15시"
+                },
+    "991217": { "name" : "이현경",
+                "consultation_time":"1월 24일 16시"
+                },
+    "970612": { "name" : "정근영",
+                "consultation_time":"1월 24일 17시"
+                },
+    # -------------------------------------- 완료 -----------------------------------------
+    "000208": { "name" : "명보경",
+                "consultation_time": "1차 헬스체크 완료!"
+                },
+    "980323": { "name" : "김지수(부산)", # 새싹반
+                "consultation_time": "1차 헬스체크 완료!"
+                },
+    "000407": { "name" : "김지안", # 새싹반
+                "consultation_time": "1차 헬스체크 완료!"
+                },
+    "020912": { "name" : "김한서", # 새싹반
+                "consultation_time": "1차 헬스체크 완료!"
+                },
+    "950914": { "name" : "송희태",
+                "consultation_time": "1차 헬스체크 완료!"
+                },
+    "990318": { "name" : "이삭",
+                "consultation_time": "1차 헬스체크 완료!"
+                },
+    "860307": { "name" : "임성욱", # 새싹반
+                "consultation_time": "1차 헬스체크 완료!"
+                },
+    "970128": { "name" : "장현영", # 새싹반
+                "consultation_time": "1차 헬스체크 완료!"
+                },
+    "870126": { "name" : "김나미", # 새싹반
+                "consultation_time": "1차 헬스체크 완료!"
                 },
     "970813": { "name" : "홍승우", # 새싹반
-                "consultation_time": wday_2
+                "consultation_time": "1차 헬스체크 완료!"
                 },
 }
 
