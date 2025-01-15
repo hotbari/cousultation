@@ -13,7 +13,7 @@ app.secret_key = 'your-secret-key-here'  # Change this to a secure secret key
 # 데이터 정리
 
 CONSULTATION_TIMES = {
-    # 새싹반 먼저
+
     "930626": { "name" : "조수민",
                 "consultation_time":"1월 16일 15시"
                 },
