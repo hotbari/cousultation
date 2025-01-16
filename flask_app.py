@@ -21,7 +21,7 @@ CONSULTATION_TIMES = {
                 "consultation_time":"1월 16일 16시"
                 },
     "930318": { "name" : "배현우",
-                "consultation_time":"1월 16일 17시"
+                "consultation_time":"1월 16일 14시"
                 },
     "940826": { "name" : "김지수(서울)",
                 "consultation_time":"1월 20일 15시"
@@ -39,7 +39,7 @@ CONSULTATION_TIMES = {
                 "consultation_time":"1월 21일 16시"
                 },
     "901112": { "name" : "이영득",
-                "consultation_time":"1월 21일 17시"
+                "consultation_time":"1월 21일 14시"
                 },
     "030709": { "name" : "권지원",
                 "consultation_time":"1월 22일 15시"
@@ -57,7 +57,7 @@ CONSULTATION_TIMES = {
                 "consultation_time":"1일 23일 16시"
                 },
     "920131": { "name" : "김태진",
-                "consultation_time":"1월 23일 17시"
+                "consultation_time":"1월 23일 14시"
                 },
     "920821": { "name" : "박유진",
                 "consultation_time":"1월 24일 15시"
